@@ -1,0 +1,286 @@
+body html {
+    font-family: "Roboto Mono";
+    overflow-x: hidden !important;
+}
+.features-carousel {
+    padding-top: 2em;
+}
+
+#background {
+    height: clamp(700px, 93%, 800px);
+    width: 100%;
+    background-image: url(https://media.discordapp.net/attachments/968521031809646632/971043729056104488/IMG_0028.webp?width=1510&height=940);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#black-square {
+    background-color: #000000c0;    
+    height: 600px;
+    width: 66vw;
+    top: 0;
+    left: 0;
+    transform: translate(15vw, 120px);
+    display: flex;
+    flex-direction: row;
+    padding: 2vh 2vw;
+    border-radius: 10px;
+    flex-direction: column-reverse;
+}
+
+
+
+#home-page-img {
+    max-height: 30vh;
+    height: 30vw;
+    width: auto;
+}
+
+#home-page-logo {    
+    height: 5%;
+    width: auto;
+
+    top: 0;
+    right: 0;
+    transform: translate(-15%, 15%);
+}
+.black-box {
+    background-color: #000000c0;
+    height: 30%;
+    width: 70%;
+    border-radius: 10px;
+    margin: 3em;
+    display: flex;
+    padding: 4.5em;
+}
+
+#home-page-text {
+    height: 100%;
+    width: 100%;
+    padding-left: 3%;
+    color: #FFF;
+    text-align: center;
+}
+
+#sub-text {
+    padding: 8% 0;
+    color: #DD7A8D;
+}
+
+#main-text {
+    height: 50%;
+    max-height: 5vw;
+}
+
+#home-page-text h1 {
+    font-size: 3.5vw;
+    line-height: 120%;
+    padding-top: 7%;
+}
+
+#btn-contact-us {
+    margin-top: 5%; 
+    height: 60px;
+    width: min(60vw, 200px);
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    color: #FFF;
+    font-size: min(8vw, 24px);
+}
+.invisible {
+    visibility: hidden;
+}
+
+
+@media screen and (max-width: 1150px) {
+    .black-box {
+        background-color: #000000c0;
+        height: 30%;
+        width: 70%;
+        border-radius: 10px;
+        margin: 3em;
+        display: flex;
+        padding: 4.5em;
+        flex-direction: column;
+    }
+    .features-mobile {
+        display: block !important;
+    }
+    .features {
+        display: none !important;
+    }
+    #background {
+        height: 950px;
+    }
+}
+
+@media screen and (max-width: 770px ) {
+    .black-box {
+        background-color: #000000c0;
+        width: auto;
+        border-radius: 10px;
+        display: flex;
+        padding: 4.5em;
+        flex-direction: column;
+    }
+    .black-box-child:last-child {
+        display: none;
+    }
+    #background {
+        height: 450px;
+    }
+    .carousel-img{
+        width: 200px
+    }
+    .invisible {
+        visibility: visible !important;
+        color: white;
+    }
+    .background-container #background .black-box .black-box-child {
+        margin-top: 0px !important;
+    }
+    .features-mobile {
+        display: block !important;
+    }
+    .features {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 580px) {
+    .grid-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobile-icons {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+
+@media screen and ( max-width: 500px ) {
+    #reviews {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+    }
+}
+@media screen and ( max-width: 1230px ) and ( min-width: 994px ) {
+    .black-box {
+        background-color: #000000c0;
+        border-radius: 10px;
+        display: flex;
+        height: 10% !important;
+        width: 50%;
+        flex-direction: column;
+    } 
+    .features {
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly !important;
+        max-width: 100% !important;
+    }
+    .features-text {
+        margin-top: 15em;
+        max-width: 60% !important;
+        padding: 0px !important;
+    }
+    #background {
+        height: 950px;
+    }
+}
+
+.features-mobile {
+    display: none;
+}
+.feature-mobile-box{
+    background-color: #222529;
+      padding: 2em;
+}
+.carousel-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1%;
+}
+
+.carousel-container > * {
+    padding: 1%
+}
+
+.carousel-container-child{
+    width: 50vw;
+}
+
+.carousel-container-child:first-child {
+    text-align: center;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.carousel-img {
+    border-radius: 10px;
+    max-height: 250px;
+    max-width: 50vw;
+}
+.main-carousel {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+}
+.features {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #222529;
+    color : white;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.icons .features-txt {
+    opacity: 1.0 !important;
+}
+
+.features-text {
+    padding: 1rem !important;
+    font-size: 1.5rem;
+    background-color: red;
+    opacity: 0.8;
+    border-radius: 10px;
+    width: 5em;
+    margin: 1em;
+    height: 8em;
+}
+.features-text:hover {
+    opacity: 1.0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+}
+.grid-item {
+    text-align: center;
+    background-color: red;
+    margin: 0.5em;
+    border-radius: 10px;
+    color: white;
+}
+.mobile-icons {
+    height: 70px !important;
+}
+
+#reviews {
+    background-color: #222529;
+}

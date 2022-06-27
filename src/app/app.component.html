@@ -1,0 +1,58 @@
+<!--Navbar-->
+<mdb-navbar class="nav-bar" SideClass="navbar navbar-1 navbar-dark " [containerInside]="false" >
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#"><img id="navbar-logo" src="https://cdn.discordapp.com/attachments/968521031809646632/969553601854840852/Untitled_Artwork_2.png" width="200px" style="border-radius: 10px;" alt="" class="d-inline-block align-middle mr-2"></a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/home']">HOME<span
+            class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/podcast-studio']">PODCAST STUDIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/meeting-room']">MEETING ROOM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/desk-and-membership']">DESK & MEMBERSHIP</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/contact']">CONTACT</a>
+      </li>
+
+    </ul>
+    <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+
+<router-outlet></router-outlet>
+
+<!-- <footer>
+  <img id="footer-img" src="https://media.discordapp.net/attachments/968521031809646632/971700917319659550/unknown_2.png">
+  <p>Enquiries: 021-4285560<br>Email: info@ecentres.ie</p>
+  <div id="social-media">
+    <a href="https://www.facebook.com/ECharlevilleEcentre/" target="_blank" class="fa fa-facebook"></a>
+    <a href="https://ie.linkedin.com/in/charlevillechamberofcommerce" target="_blank" class="fa fa-linkedin"></a>
+  </div>
+</footer> -->
+
+<footer class="bg-dark text-center text-white">
+
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-white" href="https://www.facebook.com/ECharlevilleEcentre/">ECharlevilleEcentre</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+

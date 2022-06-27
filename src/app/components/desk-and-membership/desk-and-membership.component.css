@@ -1,0 +1,118 @@
+body, html {
+    overflow-y: hidden;
+}
+.card {
+    border: none;
+}
+.flex-container {
+    display: flex;
+    height: 100%;
+    max-height: 93vh;
+}
+
+.flex-child {
+    flex: 1;
+}  
+ 
+.flex-child:first-child {
+
+    color: white;
+    background-color: #333333;
+}
+.flex-child:last-child {
+    color: #333333;
+    background-color: white;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.registration-card {
+    width: 200px;
+    text-align: center;
+}
+
+.example-full-width {
+    
+    font-size: large;
+}
+.welcome-text {
+    font-size: xx-large;
+}
+h2{
+    color: black;
+}
+
+
+@media screen and (max-width: 992px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 770px ) {
+    .desk-images {
+        width: 70% !important;
+        height: auto !important;
+    }
+}
+@media screen and ( max-width: 1230px ) and ( min-width: 993px ) {
+   .desk-images {
+       max-width: 30em !important;
+       height: auto !important;
+   }
+   body html {
+       overflow-x: hidden !important;
+   }
+}
+
+
+.logo-text {
+    width: 35%;
+    margin: 10px auto;
+    padding: 12px 0px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: larger;
+}
+.logo-text.f {
+    background-color: white;
+    color: #333333;
+}
+.logo-text.g {
+    background-color: #333333;
+    color: white;
+}
+
+.book-btn.last {
+    background-color: #333333;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: larger;
+}
+.book-btn.first {
+    background-color: white;
+    color: #333333;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: larger;
+}
+
+.img{
+    text-align: center;
+    margin-top: 1em;
+}
+.desk-images {
+
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin-top: 3em;
+}

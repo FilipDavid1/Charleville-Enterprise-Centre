@@ -1,0 +1,130 @@
+<div class="flex-container">
+  <div class="flex-child text">
+
+    <div class="img">
+      <img class="desk-images"
+        src="https://cdn.discordapp.com/attachments/971009722788499486/974278819173253150/e_charleville_meeting_room_image_1.png"
+        alt="">
+    </div>
+
+    <div class="logo-text g">
+      <p class="text">Price Per 1 hour: <br> €20.00</p>
+    </div>
+    <div class="logo-text g" id="description" style="padding: 0.5em;">
+      <h3>Max Room Capacity: 20</h3>
+      <p id="text" style="font-size: small;">We have a multifunction meeting room, that can be used for group or one to
+        one meetings and can be
+        configured in a number of ways, the meeting room can be set up*
+        Boardroom Style -Capacity 16,
+        Training Room - Capacity 20,
+
+        Cinema Style - Capacity 20,
+
+        Group Capacity - Capacity 20
+        <br>
+        <br>
+        Our state of the art 75 inch touch screen monitor, interactive whiteboard and video conferencing facilities
+        offer unrivalled facilities in the Charleville area for your meeting, teleconference or presentation.
+      </p>
+    </div>
+
+
+  </div>
+
+  <div class="flex-child card">
+    <form #bookingForm (ngSubmit)="onSubmit()">
+      <h1 class="text">Meeting room</h1>
+
+      <div class="date-picker">
+        <mat-form-field appearance="outline">
+          <mat-label>Enter a date range</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input [(ngModel)]="startDate" name="startD" matStartDate placeholder="Start date">
+            <input [(ngModel)]="endDate" name="endD" matEndDate placeholder="End date">
+          </mat-date-range-input>
+          <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+      </div>
+      <div class="flex-container-date">
+        <div class="flex-child-date">
+          <p>Start With:</p>
+          <ngb-timepicker [(ngModel)]="start" name="startT"></ngb-timepicker>
+        </div>
+        <div class="flex-child-date">
+          <p>Start With:</p>
+          <ngb-timepicker [(ngModel)]="end" name="endT"></ngb-timepicker>
+        </div>
+
+      </div>
+
+
+
+
+
+
+      <div class="rent-container">
+        <div class="rent-container-child">
+          <h1>FINAL PRICE:€</h1>
+        </div>
+        <div class="rent-container-child">
+          <button type="button" mat-raised-button id="book-btn" (click)="openTempDialog()">BOOK NOW</button>
+
+        </div>
+
+        <p>
+          The room is also available for a half day rate of €65 and a daily rate of €120, for multiple day bookings
+          please contact us daily for a preferential rate.</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<ng-template let-bottomSheetRef="bottomSheetRef" #templateBottomSheet>
+  <div class="signup-form">
+    <form #signUpForm="ngForm" (ngSubmit)="onSubmit()">
+      <h2 style="color: black !important;">Please fill in this form to comfirm reservation!</h2>
+
+      <div class="form-group">
+        <label>Name</label>
+        <input [(ngModel)]="model.name" placeholder="First & Last Name" type="text" class="form-control"
+          name="firstName" required>
+
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input [(ngModel)]="phoneNum" type="number" class="form-control" name="phoneNumber" required minlength="8"
+          maxlength="10" placeholder="0123456789">
+
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input [(ngModel)]="model.email" type="email" class="form-control" name="email" placeholder="example@gmail.com"
+          required pattern="^[_A-Za-z0-9-+]+(.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(.[A-Za-z0-9]+)*(.[A-Za-z]{2,})$">
+      </div>
+      <div class="form-group">
+        <button type="submit" mat-raised-button [disabled]="!signUpForm.form.valid"
+          (click)="closeTemplateSheetMenu()">Confirm
+        </button>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<ng-template #dialogRef let-mydata>
+  <h3>Covid 19 restrictions</h3>
+  Note these are maximum capacity numbers, due to Covid 19 restrictions please
+        confirm required meeting room numbers with reception before booking.
+
+        The meeting room has been used for Board Meetings, Training, Community Group Meetings, Product Launches, Charity
+        Coffee Mornings, One to One Meetings, Team building Exercises, a Grind School, Foreign Language School and a
+        Homework Club. We will work with you to ensure the room fits your specification.
+
+        Bottled Water, Tea/Coffee, Biscuits are available if required and are charged on a per person basis.
+
+        We can facilitate hot and cold lunches with one of our external partners if required.
+        <br>
+  <button mat-button mat-dialog-close="I am from dialog land..." (click)="openTemplateSheetMenu()">OK</button>
+</ng-template>

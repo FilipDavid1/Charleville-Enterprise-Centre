@@ -1,0 +1,109 @@
+body html {
+    font-family: "Roboto Mono";
+    overflow-x: hidden !important;
+}
+
+h2, p, a, .flex-ch, .connector {
+    color: white;
+    margin: 0;
+}
+
+h2 {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+button {
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.connector {
+    margin: 0 5px;
+}
+
+.flex-c {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.flex-chi {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+#background {
+    height: clamp(700px, 93%, 800px);
+    width: 100%;
+    background-image: url(https://media.discordapp.net/attachments/968521031809646632/971043729056104488/IMG_0028.webp?width=1510&height=940);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+}
+
+.black-box {
+    background-color: #000000c0;
+    height: 30%;
+    width: 70%;
+    max-width: 100vw;
+    border-radius: 10px;
+    margin: 3em;
+    display: flex;
+    flex-direction: column;
+    padding: 4.5em;
+}
+
+
+@media screen and (max-width: 992px) {
+    .black-box {
+        background-color: #000000c0;
+        height: 30%;
+        width: 70%;
+        border-radius: 10px;
+        margin: 3em;
+        display: flex;
+        padding: 4.5em;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 770px ) {
+    .black-box {
+        background-color: #000000c0;
+        width: auto;
+        border-radius: 10px;
+        display: flex;
+        padding: 4.5em;
+        flex-direction: column;
+    }
+    #backgorund {
+        background-image: none;
+    }
+}
+@media screen and ( max-width: 1230px ) and ( min-width: 994px ) {
+    .black-box {
+        background-color: #000000c0;
+        border-radius: 10px;
+        display: flex;
+        height: 10% !important;
+        width: 50%;
+        flex-direction: column;
+    } 
+    
+}

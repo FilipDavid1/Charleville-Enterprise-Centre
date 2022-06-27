@@ -1,0 +1,63 @@
+<div id="background">
+  <div class="background-container">
+    <div class="black-box">
+      <div class="black-box-child">
+        <div class="main-carousel">
+          <h1 class="invisible" style="color: white">
+            e-Charlevillebr <br />
+            Enterprise Centre 
+          </h1>
+          <ngb-carousel>
+            <ng-template ngbSlide *ngFor="let image of images">
+              <div class="wrapper">
+                <img
+                  class="carousel-img"
+                  [src]="image.src"
+                  alt="Random first slide"
+                />
+              </div>
+            </ng-template>
+          </ngb-carousel>
+          <p class="invisible" id="sub-text">
+            Based in Charleville, Cork. Tel. 06333133
+          </p>
+        </div>
+      </div>
+
+      <div class="black-box-child">
+        <div id="home-page-text">
+          <h1>e-Charleville<br />Enterprise Centre</h1>
+          <p id="sub-text">Based in Charleville, Cork. Tel. 06333133</p>
+          <p id="main-text">
+            Charleville Enterprise Centre is based on Bakers Road and provides
+            access to Hot Desk, Longer Term Desk space and Meeting space to
+            businesses, community groups and individuals from Charleville and
+            its hinterland, while also providing a professional meeting space
+            approximately midway between Cork and Limerick on the busy N20
+            Corridor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="reviews">
+
+<div class="features">
+  <div class="features-text" *ngFor="let feature of features">
+    <p class="features-txt">{{ feature.text }}</p>
+    <img class="icons" [src]="feature.src" alt="" />
+  </div>
+</div>
+  
+</div>
+<div class="features-mobile" >
+  <div class="feature-mobile-box">
+    <div class="grid-container">
+    <div  *ngFor="let feature of features">
+      <p class="grid-item">{{ feature.text }} <img class="mobile-icons" [src]="feature.src" alt=""> </p> 
+    </div>
+  </div>
+  </div>
+</div>

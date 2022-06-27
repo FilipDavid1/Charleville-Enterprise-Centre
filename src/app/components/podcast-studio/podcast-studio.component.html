@@ -1,0 +1,97 @@
+<div class="flex-container" >
+    <div class="flex-child text">
+  
+        <div class="img" >
+            <img class="desk-images"
+                src="https://media.discordapp.net/attachments/971009722788499486/971333519265632308/IMG_0131.webp?width=1756&height=1171" alt="">
+        </div>
+        
+        <div class="logo-text g">
+          <p class="text">Price Per 1 hour: <br> €20.00</p>
+      </div>
+      <div class="logo-text g" id="description">
+        <p style="font-size: small; padding: 0.5em;">Our podcasting studio and editing suite are available to individuals, businesses, students and community groups, Using a Rode Podcasting Deck and Professional Microphones and editing on Dark Audacity you can make a professional podcast in a professional environment.
+
+            You can connect via Bluetooth or phone cable to record podcasts in house or over the phone.  By recording with professional equipment, you have a cleaner sound and can edit much faster.  </p>
+    </div>
+  
+        
+    </div>
+  
+    <div class="flex-child card">
+        <form #bookingForm (ngSubmit)="onSubmit()">
+            <h1 style="margin-bottom: 6em;" class="text">Podcast Studio</h1>
+            
+            <div class="date-picker">
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                        <input [(ngModel)]="startDate" name="startD" matStartDate placeholder="Start date">
+                        <input [(ngModel)]="endDate" name="endD" matEndDate placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+            </div>
+                <div class="flex-container-date">
+                    <div class="flex-child-date"> 
+                        <p>Start With:</p>
+                        <ngb-timepicker [(ngModel)]="start" name="startT"></ngb-timepicker>
+                    </div>
+                    <div class="flex-child-date"> 
+                        <p>Start With:</p>
+                        <ngb-timepicker [(ngModel)]="end" name="endT"></ngb-timepicker>
+                    </div>
+  
+            </div>
+            
+  
+  
+  
+  
+  
+            <div class="rent-container">
+                <div class="rent-container-child">
+                </div>
+                <div class="rent-container-child">
+                    <button type="button" mat-raised-button id="book-btn" class="button" (click)="openTemplateSheetMenu()" >BOOK NOW</button>
+                    
+                </div>
+  
+                  <p>
+                    Contact 063-33133 for further information</p>
+            </div>
+        </form>
+    </div>
+  </div>
+  
+  
+  <ng-template let-bottomSheetRef="bottomSheetRef" #templateBottomSheet>
+    <div class="signup-form">
+        <form #signUpForm="ngForm" (ngSubmit)="onSubmit()">
+          <h2 style="color: black !important;">Please fill in this form to comfirm reservation!</h2>
+  
+          <div class="form-group">
+            <label>Name</label>
+            <input [(ngModel)]="model.name"  placeholder="First & Last Name" type="text" class="form-control" name="firstName" required >
+            
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input [(ngModel)]="phoneNum" type="number" class="form-control" name="phoneNumber" required minlength="8"
+              maxlength="10" placeholder="0123456789">
+           
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input [(ngModel)]="model.email" type="email" class="form-control" name="email" placeholder="example@gmail.com" required
+              pattern="^[_A-Za-z0-9-+]+(.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(.[A-Za-z0-9]+)*(.[A-Za-z]{2,})$">
+          </div>
+          <div class="form-group">
+            <button type="submit" mat-raised-button [disabled]="!signUpForm.form.valid" (click)="closeTemplateSheetMenu()">Confirm
+            </button>
+          </div>
+        </form>
+      </div>
+  </ng-template>

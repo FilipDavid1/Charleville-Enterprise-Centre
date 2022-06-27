@@ -1,0 +1,28 @@
+<div class="flex-container" >
+    <div class="flex-child text" *ngFor="let rental of rentalProperties">
+        <div *ngIf="rental.name == 'Hot Desk'" class="logo-text f">
+            <p class="welcome-text">{{rental.name}}</p>
+        </div>
+        <div *ngIf="rental.name == 'Dedicated Desk'" class="logo-text g">
+            <p class="welcome-text">{{rental.name}}</p>
+        </div>
+
+        <div class="img" *ngIf="rental.name == 'Hot Desk' ">
+            <img class="desk-images"
+                src="https://media.discordapp.net/attachments/968521031809646632/971046463444508753/IMG_0083.webp?width=1542&height=1028" alt="">
+        </div>
+        <div class="img" *ngIf="rental.name == 'Dedicated Desk' ">
+            <img class="desk-images"
+                src="https://media.discordapp.net/attachments/971009722788499486/971333516791009300/Untitled_Artwork.webp?width=1542&height=1028" alt="">
+        </div>
+        <div class="logo-text">
+            <p *ngIf="rental.name == 'Dedicated Desk'">{{rental.price}}€ Per Month</p>
+            <p *ngIf="rental.name == 'Hot Desk'">{{rental.price}}€ Per Week</p>
+            <button  mat-raised-button class="book-btn first" routerLink="/rental-detail/{{rental.id}}">
+                DETAILS
+            </button>
+        </div>
+    </div>
+
+    
+</div>

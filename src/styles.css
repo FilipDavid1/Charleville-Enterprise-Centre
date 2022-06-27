@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.py-3 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.btn-link {
+    color: #333 !important;
+}
+.mat-calendar-body-selected {
+    background-color: #333 !important;
+    color: white !important;
+}
+
+.mat-calendar-body-selected:hover {
+    background-color: #333 !important;
+    color: white !important;
+}
+
+.mat-badge-content:hover {
+    background-color: #333 !important;
+    color: white !important;
+}
+.mat-chip:hover .mat-standard-chip{
+    background-color: #333 !important;
+    color: white !important;
+}
+.navbar{
+    background-color: #222529 !important;
+    color: white !important;
+}
+.navbar.navbar-dark .navbar-nav .nav-item.active>.nav-link {
+    background-color: transparent !important;
+}
+.ti-widget-container {
+    margin: 0 !important;
+  }
